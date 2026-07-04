@@ -13,3 +13,7 @@ output "availability_zone" {
 output "instance_state" {
   value = aws_instance.main.instance_state
 }
+
+output "vpc" {
+  value = aws_instance.main.vpc_security_group_ids
+}

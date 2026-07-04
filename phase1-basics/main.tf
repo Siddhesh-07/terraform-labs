@@ -13,11 +13,10 @@ provider "aws" {
 }
 
 resource "aws_instance" "main" {
-    ami = "ami-06067086cf86c58e6"
-    instance_type = "t3.micro"
-
-    tags = {
-      Name = "terraform-lab-instance"
-    }
+  instance_type = var.instance_type
+  ami = var.ami_id
   
+  tags = {
+    Name = var.instance_name
+  }
 }

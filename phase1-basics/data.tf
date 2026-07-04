@@ -11,7 +11,7 @@ data "aws_security_group" "server-sg" {
 }
 
 data "aws_subnet" "public-subnet" {
-  vpc_id = data.aws_vpc.vpc1.id
+    vpc_id = data.aws_vpc.vpc1.id
     filter {
     name   = "tag:Name"
     values = ["public-subnet"]

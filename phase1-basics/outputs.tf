@@ -14,6 +14,6 @@ output "instance_state" {
   value = aws_instance.main.instance_state
 }
 
-output "vpc" {
+output "sg_id" {
   value = aws_instance.main.vpc_security_group_ids
 }

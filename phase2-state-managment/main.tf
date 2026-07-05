@@ -19,7 +19,7 @@ variable "instance_type" {
 
 variable "instance_name" {
   type    = string
-  default = "state-lab-instance"
+  default = "remote-state-instance"
 }
 
 variable "ami_id" {

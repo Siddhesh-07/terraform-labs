@@ -19,3 +19,7 @@ output "private_subnet_id" {
   description = "Private subnet ID"
   value       = aws_subnet.private.id
 }
+output "private_subnet_2_id" {
+  description = "Second private subnet ID"
+  value       = aws_subnet.private_2.id
+}

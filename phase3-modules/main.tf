@@ -56,6 +56,6 @@ module "database" {
   master_username      = "postgres"
   master_password      = "TerraformPassword123!"  
   db_subnet_group_name = "phase3-db-subnet-group"
-  subnet_ids           = [module.networking.private_subnet_id]
+  subnet_ids           = [module.networking.private_subnet_id, module.networking.private_subnet_2_id]
   security_group_ids   = [module.networking.security_group_id]
 }

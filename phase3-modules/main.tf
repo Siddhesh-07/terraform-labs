@@ -43,3 +43,19 @@ module "ec2_instance_2" {
   security_group_ids = [module.networking.security_group_id]
   subnet_id = module.networking.public_subnet_id
 }
+
+module "database" {
+  source = "./modules/rds_basic"
+
+  db_identifier        = "phase3-postgres-db"
+  db_engine            = "postgres"
+  db_engine_version    = "15.3"
+  db_instance_class    = "db.t3.micro"
+  allocated_storage    = 20
+  database_name        = "appdb"
+  master_username      = "postgres"
+  master_password      = "TerraformPassword123!"  
+  db_subnet_group_name = "phase3-db-subnet-group"
+  subnet_ids           = [module.networking.private_subnet_id]
+  security_group_ids   = [module.networking.security_group_id]
+}

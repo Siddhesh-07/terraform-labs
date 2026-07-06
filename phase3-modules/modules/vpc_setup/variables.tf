@@ -18,3 +18,8 @@ variable "availability_zone" {
   type        = string
   default     = "us-east-1a"
 }
+
+variable "private_subnet_cidr" {
+  type        = string
+  default     = "10.0.2.0/24"
+}

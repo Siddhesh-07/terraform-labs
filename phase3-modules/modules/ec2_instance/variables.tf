@@ -3,6 +3,11 @@ variable "ami_id" {
     #default = "ami-06067086cf86c58e6"
 }
 
+variable "subnet_id" {
+  type = string
+  #default = ""
+}
+
 variable "instance_type" {
   type = string
   default = "t3.micro"

@@ -49,7 +49,6 @@ module "database" {
 
   db_identifier        = "phase3-postgres-db"
   db_engine            = "postgres"
-  db_engine_version    = "15.3"
   db_instance_class    = "db.t3.micro"
   allocated_storage    = 20
   database_name        = "appdb"

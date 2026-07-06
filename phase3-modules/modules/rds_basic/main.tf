@@ -10,7 +10,6 @@ resource "aws_db_subnet_group" "main" {
 resource "aws_db_instance" "main" {
   identifier       = var.db_identifier
   engine           = var.db_engine
-  engine_version   = var.db_engine_version
   instance_class   = var.db_instance_class
   allocated_storage = var.allocated_storage
 

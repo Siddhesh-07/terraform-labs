@@ -50,6 +50,6 @@ output "web_ip" {
   value = var.create_web_server ? aws_instance.web[0].public_ip : "Not created"
 }
 
-output "db_ip" {
-  value = var.create_db_server ? aws_instance.db[0].public_ip : "Not created"
-}
+#output "db_ip" {
+ # value = var.create_db_server ? aws_instance.db[0].public_ip : "Not created"
+#}
